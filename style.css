@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    font-size: x-large;
+}
+
+.game-options, .scoreboard{
+    display: flex;
+    gap:60px;
+}
+
+.game-options{
+    margin: 0;
+}
+
+.score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
