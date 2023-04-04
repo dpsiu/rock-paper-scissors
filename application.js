@@ -34,19 +34,20 @@ console.log(playerSelection);
 /*Plays a round of RPS. Accounts for all 7 outcomes. */
 function playRound(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
-        console.log("Tie");
+        document.getElementById("round").innerHTML = "Tie round.";
     }
     else if(playerSelection === 'Rock' && computerSelection === 'Scissors'
             || playerSelection === 'Paper' && computerSelection === 'Rock'
             || playerSelection === 'Scissors' && computerSelection === 'Paper'){
-        console.log("Player wins!" + playerSelection + " beats " + computerSelection + ".")
         document.getElementById("playerScore").innerHTML = playerScore ++;
+        document.getElementById("round").innerHTML = "You won this round. "  + playerSelection + " beats " + computerSelection + ".";
     }
     else if(computerSelection === 'Rock' && playerSelection === 'Scissors'
             || computerSelection === 'Paper' && playerSelection === 'Rock'
             || computerSelection === 'Scissors' && playerSelection === 'Paper'){
-        console.log("Computer wins!" + computerSelection + " beats " + playerSelection + ".")
         document.getElementById("computerScore").innerHTML = computerScore ++;
+        document.getElementById("round").innerHTML = "You lost this round. "  + computerSelection + " beats " + playerSelection + ".";
+
     }
 }
 
