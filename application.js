@@ -2,6 +2,7 @@ console.log(2+2);
 
 let playerScore = 1;
 let computerScore = 1;
+let roundNumber = 0;
 
 
 /*Return a random value for computer choice */
@@ -50,6 +51,24 @@ function playRound(playerSelection, computerSelection){
 
     }
 }
+
+/* "Game" function */
+
+function game(playerScore, computerScore){
+    while (playerScore < 6 && computerScore < 6){
+        playRound(playerSelection, computerSelection);
+    }
+    
+    if (playerScore === 6){
+        document.getElementById("round").innerHTML = "You win " + (playerScore-1) + " - " + (computerScore-1) + "!";
+    }
+    else{
+        document.getElementById("round").innerHTML = "You lose " + (computerScore-1) + " - " + (playerScore-1) + ".";
+    }
+}
+
+game(playerScore, computerScore);
+
 
 
 /* 
