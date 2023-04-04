@@ -4,7 +4,6 @@ let playerScore = 1;
 let computerScore = 1;
 
 
-
 /*Return a random value for computer choice */
 function getComputerChoice(gameOptions){
     return gameOptions[Math.floor(Math.random()*gameOptions.length)];
